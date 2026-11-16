@@ -1,0 +1,87 @@
+export const goodsList=[
+    {
+        id:1,
+        name:"零食一",
+        price:10,
+        img:new URL('../assets/img/snack1.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:2,
+        name:"零食二",
+        price:14,
+        img:new URL('../assets/img/snack2.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:3,
+        name:"零食三",
+        price:15,
+        img:new URL('../assets/img/snack3.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:4,
+        name:"零食四",
+        price:17,
+        img:new URL('../assets/img/snack4.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:5,
+        name:"零食五",
+        price:16,
+        img:new URL('../assets/img/snack5.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:6,
+        name:"零食六",
+        price:29,
+        img:new URL('../assets/img/snack6.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:7,
+        name:"零食七",
+        price:23,
+        img:new URL('../assets/img/snack7.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:8,
+        name:"零食八",
+        price:10,
+        img:new URL('../assets/img/snack8.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:9,
+        name:"零食九",
+        price:32,
+        img:new URL('../assets/img/snack9.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:10,
+        name:"零食十",
+        price:10,
+        img:new URL('../assets/img/snack10.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:11,
+        name:"零食十一",
+        price:10,
+        img:new URL('../assets/img/snack11.jpg',import.meta.url).href,
+        stock:20,
+    },
+    {
+        id:12,
+        name:"零食十二",
+        price:10,
+        img:new URL('../assets/img/snack12.jpg',import.meta.url).href,
+        stock:20,
+    }
+
+]
