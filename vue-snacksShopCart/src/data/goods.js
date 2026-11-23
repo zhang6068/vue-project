@@ -1,3 +1,4 @@
+// 商品数据
 export const goodsList=[
     {
         id:1,

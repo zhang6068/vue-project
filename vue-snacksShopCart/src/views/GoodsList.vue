@@ -1,6 +1,14 @@
+<!-- 商城页面 -->
 <template>
     <div class="goods-container">
-        <!-- 顶部搜索框 -->
+
+      <!-- 商城标题组件 -->
+      <!-- <MallHeader /> -->
+
+      <!-- 轮播组件，传banner数据过去 -->
+      <BannerSwiper :banners="bannerList" />
+
+      <!-- 顶部搜索框 -->
       <div class="search-bar">
         <input type="text"
         v-model="keyword"
@@ -16,19 +24,19 @@
             <div class="price">￥:{{ good.price }}</div>
             <button @click="addToCart(good)" class="add-btn">加入购物车</button>
         </div>
-     </div>
-     <!-- 无搜索结果 -->
-    <div class="no-result" v-else>
-      没有找到相关商品~
-    </div>
-    
-
+      </div>
+      <!-- 无搜索结果 -->
+      <div class="no-result" v-else>
+        没有找到相关商品~
+      </div>
     </div>
     
     
 </template>
 
 <script setup>
+    import MallHeader from '@/components/MallHeader.vue';
+    import BannerSwiper from '@/components/BannerSwiper.vue';
     import { goodsList } from '@/data/goods';
     const goods=goodsList
 
@@ -57,13 +65,30 @@
             return item.name.includes(kw)
         })
     })
+
+    // 轮播数据放在父组件
+    const bannerList = ref([
+    {
+      img: '/img/swiper1.png',
+      title: '新品零食上架'
+    },
+    {
+      img: '/img/swiper2.png',
+      title: '满减特惠进行中'
+    },
+    {
+      img: '/img/swiper3.png',
+      title: '精选饼干专区'
+    }
+  ])
 </script>
 
 <style scoped>
 .goods-container {
+  padding: 16px;
   padding-top: 20px;
-  padding-left: 100px;
-  padding-right: 100px;
+  /* padding-left: 100px;
+  padding-right: 100px; */
   /* 重点：留出底部空间，避开底部导航栏50px */
   padding-bottom: 60px;
   background-color: #f4f4f4;
@@ -123,6 +148,7 @@ color: #e53935;
   font-size: 14px;
   outline: none;
   box-sizing: border-box;
+  
 }
 .search-input:focus {
   border-color: #ff7d00;

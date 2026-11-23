@@ -66,7 +66,6 @@ export const useCartStore=defineStore('cart',{
            if(findItem){
             findItem.checked=!findItem.checked
             console.log(findItem.checked);
-            
            }
         },
         //全选框点击

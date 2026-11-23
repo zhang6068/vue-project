@@ -1,4 +1,5 @@
 <template>
+  
   <!-- 路由出口，页面渲染在这里 -->
   <div class="page-wrap">
     <router-view />
@@ -9,7 +10,7 @@
     <router-link to="/goods" class="tab-item">
       <div>商品</div>
     </router-link>
-    <router-link to="cart" class="tab-item">
+    <router-link to="/cart" class="tab-item">
       <div>购物车</div>
       <!-- 角标：数量大于0才显示 -->
       <span class="badge" v-if="cartStore.totalCount > 0">
@@ -22,12 +23,13 @@
 
 <script setup>
 
+
 import { useCartStore } from './stores/cart';
 const cartStore=useCartStore()
 
 </script>
 
-<style>
+<style scoped>
 .page-wrap {
   padding-bottom: 50px;
 }

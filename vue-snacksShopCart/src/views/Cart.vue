@@ -1,7 +1,7 @@
+<!-- 购物车页面 -->
 <template>
   <div class="cart-page">
     <h2>我的购物车</h2>
-
     <div v-if="cartStore.cartList.length === 0" class="empty">
       购物车空空如也~
       <br />
@@ -42,6 +42,7 @@
           type="checkbox"
           :checked="cartStore.isAllChecked"
           @change="cartStore.toggleAllCheck()"
+          :disabled="cartStore.cartList.length===0"
         />
         <span>全选</span>
       </label>
@@ -52,7 +53,7 @@
 
       <button
         class="cart-settle"
-        :disabled="cartStore.totalPrice === 0"
+        :disabled="cartStore.cartList.length === 0"
         @click="handleSettle"
       >
         结算
