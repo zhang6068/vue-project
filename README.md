@@ -39,6 +39,21 @@ Vue 3 练手小项目集合，用于学习 Vue 3 + Vite 全家桶的基础用法
 
 **技术栈：** Vue 3 + Vue Router + Pinia + pinia-plugin-persistedstate + Vite + vue-devtools
 
+
+后续可扩展 
+- [ ] 商品详情弹窗（大图 + 描述 + 规格）
+- [ ] 结算成功页 / 订单记录页
+- [ ] 商品分类筛选 + 价格排序
+- [ ] 库存为 0 时按钮置灰
+- [ ] 骨架屏 + 加载状态
+- [ ] 接入真实后端接口（axios）
+
+
+## 3.轮播图（vue-carousel）
+**功能：**
+-图片自动播放，手动：上一张、下一张、点击小圆点
+
+
 ## 🚀 运行项目
 
 > 环境要求：Node.js `^22.18.0 || >=24.12.0`
@@ -83,3 +98,4 @@ npm run build
 - **页面间路由跳转**：`<router-link>` / 编程式导航
 - **组件拆分**：MallHeader 顶部导航、BannerSwiper 轮播等可复用组件
 - **静态数据驱动渲染**：`data/goods.js` 商品数据 + `v-for` 商品列表渲染
+
